@@ -20,6 +20,8 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity android:name=".ChecklistActivity"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

@@ -28,8 +28,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.i(ACTIVITY_NAME, "User clicked Checklist");
-                //Intent intent = new Intent(MainActivity.this,Checklist.class);
-                //startActivity(intent);
+                Intent intent = new Intent(MainActivity.this,ChecklistActivity.class);
+                startActivity(intent);
             }
         });
         activity2.setOnClickListener(new View.OnClickListener() {
