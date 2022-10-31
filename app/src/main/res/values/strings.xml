@@ -16,4 +16,15 @@
     <string name="thursday_quote">\“It is only when we take chances, when our lives improve. The initial and the most difficult risk that we need to take is to become honest.\" —Walter Anderson</string>
     <string name="friday_quote">\“Nature has given us all the pieces required to achieve exceptional wellness and health, but has left it to us to put these pieces together.\” —Diane McLaren</string>
     <string name="saturday_quote">\“When you give joy to other people, you get more joy in return. You should give a good thought to happiness that you can give out.\”— Eleanor Roosevelt</string>
+    <string name="upload">Upload Today\'s Accomplishment</string>
+    <string name="button_msg">Accomplishment of the Day</string>
+    <string name="your_acc">Tell Us Your Accomplishment!</string>
+    <string name="post">Post</string>
+    <string name="cancel">cancel</string>
+    <string name="no_post">You have not posted yet today.</string>
+    <string name="d1">Day 1 - Today I got an A+ on my calculus test.</string>
+    <string name="d2">Day 2 - I finished reading my novel.</string>
+    <string name="d3">Day 3 - Finally bench pressed 225lbs.</string>
+    <string name="d4">Day 4 - Finished my course in Python with an A-.</string>
+    <string name="today">No accomplishments yet today.</string>
 </resources>
