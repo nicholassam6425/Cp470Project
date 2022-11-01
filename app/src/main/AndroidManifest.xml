@@ -20,7 +20,13 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <activity android:name=".AccomplishmentActivity"
+            android:exported="false"/>
         <activity android:name=".ChecklistActivity"
+            android:exported="false"/>
+        <activity android:name=".StressRelief"
+            android:exported="false"/>
+        <activity android:name=".TrackingSystem"
             android:exported="false"/>
         <activity
             android:name=".MainActivity"

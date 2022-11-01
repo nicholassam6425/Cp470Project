@@ -52,8 +52,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.i(ACTIVITY_NAME, "User clicked Accomplishment");
-                //Intent intent = new Intent(MainActivity.this,Accomplishment.class);
-                //startActivity(intent);
+                Intent intent = new Intent(MainActivity.this,AccomplishmentActivity.class);
+                startActivity(intent);
             }
         });
         activity5.setOnClickListener(new View.OnClickListener() {
