@@ -43,7 +43,6 @@ public class ChecklistActivity extends AppCompatActivity {
         while (!cursor.isAfterLast()) {
             objectives.add(cursor.getString(cursor.getColumnIndex(ChecklistDatabaseHelper.objective_value)));
             boolean temp[] = Arrays.copyOf(checked, checked.length + 1);
-            Log.d("CUM", String.valueOf(cursor.getInt(cursor.getColumnIndex(ChecklistDatabaseHelper.checked_name))));
             temp[checked.length] = (cursor.getInt(cursor.getColumnIndex(ChecklistDatabaseHelper.checked_name)) == 1);
             checked = temp;
             cursor.moveToNext();
@@ -80,10 +79,7 @@ public class ChecklistActivity extends AppCompatActivity {
                 public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                     ContentValues values = new ContentValues();
                     values.put(checklistDatabaseHelper.checked_name, b ? 1 : 0);
-                    Log.d("CUM2", String.valueOf(values.get(checklistDatabaseHelper.checked_name)));
                     int a = database.update(checklistDatabaseHelper.table_name, values, checklistDatabaseHelper.id + " = ?", new String[]{Integer.toString(position+1)});
-                    Log.d("WHOLE ASS TABLE", checklistDatabaseHelper.tableToString(database, ChecklistDatabaseHelper.table_name));
-                    Log.d("cum3", String.valueOf(a));
                 }
             });
             chkbox.setChecked(getStatus(position));
