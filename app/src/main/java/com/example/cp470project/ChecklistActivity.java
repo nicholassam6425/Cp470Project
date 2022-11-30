@@ -28,9 +28,14 @@ import java.util.ArrayList;
 
 public class ChecklistActivity extends AppCompatActivity {
     public ArrayList<String> objectives = new ArrayList<>();
+
+    //THIS ARRAY IS AN ARRAY OF CHECKED BOXES. USE FOR PROGRESS
     public boolean checked[] = new boolean[0];
+
+
     static SQLiteDatabase database;
     private ChecklistDatabaseHelper checklistDatabaseHelper;
+    private boolean ispopulated = false;
     @SuppressLint("Range")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +45,18 @@ public class ChecklistActivity extends AppCompatActivity {
         database = checklistDatabaseHelper.getWritableDatabase();
         Cursor cursor = database.query(checklistDatabaseHelper.table_name,null, null, null,null,null,null);
         cursor.moveToFirst();
+
         while (!cursor.isAfterLast()) {
             objectives.add(cursor.getString(cursor.getColumnIndex(ChecklistDatabaseHelper.objective_value)));
             boolean temp[] = Arrays.copyOf(checked, checked.length + 1);
             temp[checked.length] = (cursor.getInt(cursor.getColumnIndex(ChecklistDatabaseHelper.checked_name)) == 1);
             checked = temp;
             cursor.moveToNext();
+            ispopulated = true;
+        }
+        if (ispopulated) {
+            TextView hint = findViewById(R.id.checklisthint);
+            hint.setVisibility(View.GONE);
         }
         FloatingActionButton fab = findViewById(R.id.add_to_checklist);
         ListView checklist = findViewById(R.id.checklist);
@@ -110,6 +121,11 @@ public class ChecklistActivity extends AppCompatActivity {
                             temp[checked.length] = false;
                             checked = temp;
                             adapter1.notifyDataSetChanged();
+                            if (!ispopulated) {
+                                ispopulated = true;
+                                TextView hint = findViewById(R.id.checklisthint);
+                                hint.setVisibility(View.GONE);
+                            }
                             edit.setText("");
                         }
                     });
