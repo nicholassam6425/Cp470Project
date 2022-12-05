@@ -18,7 +18,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
-        android:text="@string/tuesday_quote"
         android:textColor="@color/white"
         android:textSize="24sp"
         android:textAlignment="center"
@@ -32,15 +31,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3"></TextView>
 
-    <Button
-        android:id="@+id/change_day"
-        android:text="@string/day_change_hint"
-        android:layout_width="wrap_content"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        tools:ignore="MissingConstraints"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.8"></Button>
+        app:layout_constraintVertical_bias="0.6">></ProgressBar>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
