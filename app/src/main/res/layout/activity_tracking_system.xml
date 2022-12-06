@@ -9,24 +9,61 @@
     <ProgressBar
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="279dp"
-        android:layout_height="152dp"
-        android:layout_marginStart="64dp"
+        android:layout_width="277dp"
+        android:layout_height="285dp"
         android:layout_marginTop="152dp"
         android:max="100"
-        android:progress="50"
+        android:progress="44"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/text"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="16dp"
-        android:text="Progress Bar"
-        app:layout_constraintEnd_toStartOf="parent"
+        android:id="@+id/barTitle"
+        android:layout_width="169dp"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="262dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="10dp"
+        android:text="Checklist Bar:"
+        app:layout_constraintBottom_toTopOf="@+id/fraction"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/fraction"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="380dp"
+        android:gravity="right"
+        android:text="0/0"
+        android:textAlignment="gravity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barTitle" />
+
+    <!--
+    <Button
+        android:id="@+id/refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="7dp"
+        android:text="Refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fraction"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:ignore="MissingConstraints" />
+        -->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
