@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.i(ACTIVITY_NAME, "User clicked Stress Relief");
-                Intent intent = new Intent(MainActivity.this,StressRelief.class);
+                Intent intent = new Intent(MainActivity.this,stressrelief.class);
                 startActivity(intent);
             }
         });
@@ -44,16 +44,16 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.i(ACTIVITY_NAME, "User clicked Tracking System");
-                Intent intent = new Intent(MainActivity.this,TrackingSystem.class);
-                startActivity(intent);
+                //Intent intent = new Intent(MainActivity.this,TrackingSystem.class);
+                //startActivity(intent);
             }
         });
         activity4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.i(ACTIVITY_NAME, "User clicked Accomplishment");
-                Intent intent = new Intent(MainActivity.this,AccomplishmentActivity.class);
-                startActivity(intent);
+                //Intent intent = new Intent(MainActivity.this,Accomplishment.class);
+                //startActivity(intent);
             }
         });
         activity5.setOnClickListener(new View.OnClickListener() {
@@ -67,9 +67,9 @@ public class MainActivity extends AppCompatActivity {
         activity6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i(ACTIVITY_NAME, "User clicked Message Board");
-                Intent intent = new Intent(MainActivity.this,MessageBoard.class);
-                startActivity(intent);
+                Log.i(ACTIVITY_NAME, "User clicked Activity6");
+                //Intent intent = new Intent(MainActivity.this,QuoteOfTheDay.class);
+                //startActivity(intent);
             }
         });
     }
