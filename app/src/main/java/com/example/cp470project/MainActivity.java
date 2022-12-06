@@ -67,9 +67,9 @@ public class MainActivity extends AppCompatActivity {
         activity6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i(ACTIVITY_NAME, "User clicked Activity6");
-                //Intent intent = new Intent(MainActivity.this,QuoteOfTheDay.class);
-                //startActivity(intent);
+                Log.i(ACTIVITY_NAME, "User clicked Message Board");
+                Intent intent = new Intent(MainActivity.this,MessageBoard.class);
+                startActivity(intent);
             }
         });
     }
