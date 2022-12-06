@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.cp470project">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,26 +16,17 @@
         android:theme="@style/Theme.Cp470Project"
         tools:targetApi="31">
         <activity
-            android:name=".QuoteOfTheDay"
-            android:exported="false">
+            android:name=".MessageBoard"
+            android:exported="false"
+            android:label="@string/title_activity_message_board"
+            android:theme="@style/Theme.Cp470Project.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".ChecklistActivity"
-            android:exported="false"/>
-        <activity android:name=".StressRelief"
-            android:exported="false"/>
-        <activity android:name=".TrackingSystem"
-            android:exported="false"/>
-        <activity android:name=".AccomplishmentActivity"
-            android:exported="false"/>
-        <activity android:name=".MessageBoard"
-            android:exported="false"/>
         <activity
-            android:name=".MainActivity"
+            android:name=".LoginActivity"
             android:exported="true"
-            android:label="@string/title_activity_main"
             android:theme="@style/Theme.Cp470Project.NoActionBar">
             <meta-data
                 android:name="android.app.lib_name"
@@ -44,6 +37,34 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".QuoteOfTheDay"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".AccomplishmentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChecklistActivity"
+            android:exported="false" />
+        <activity
+            android:name=".StressRelief"
+            android:exported="false" />
+        <activity
+            android:name=".TrackingSystem"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.Cp470Project.NoActionBar">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
     </application>
 
