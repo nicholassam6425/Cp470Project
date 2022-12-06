@@ -11,7 +11,7 @@
         android:id="@+id/checklisthint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Click the + button to add an objective!"
+        android:text="@string/checklisthint"
         android:visibility="visible" />
     <ListView
         android:id="@+id/checklist"

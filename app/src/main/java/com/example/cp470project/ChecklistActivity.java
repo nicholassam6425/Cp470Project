@@ -20,6 +20,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -144,12 +145,12 @@ public class ChecklistActivity extends AppCompatActivity {
                                 hint.setVisibility(View.GONE);
                             }
                             edit.setText("");
+                            Toast toast = Toast.makeText(ChecklistActivity.this, R.string.goaltoast, Toast.LENGTH_SHORT);
+                            toast.show();
                         }
                     });
             Dialog dialog = customDialog.create();
             dialog.show();
-
-            Log.d("hi", "length" + checked.length);
 
         }
     }
