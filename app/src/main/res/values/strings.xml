@@ -5,15 +5,37 @@
     <string name="activity1">Checklist</string>
     <string name="activity2">Stress Relief</string>
     <string name="activity3">Tracking System</string>
-    <string name="activity4">Accomplishment</string>
+    <string name="activity4">Personal Accomplishment</string>
     <string name="activity5">Quote of the Day</string>
-    <string name="activity6">PLACEHOLDER</string>
+    <string name="activity6">Message Board</string>
     <string name="day_change_hint">Change Day</string>
-    <string name="sunday_quote">\“We cannot solve problems with the kind of thinking we employed when we came up with them.\” — Albert Einstein</string>
-    <string name="monday_quote">\“Learn as if you will live forever, live like you will die tomorrow.\” — Mahatma Gandhi</string>
-    <string name="tuesday_quote">\“Stay away from those people who try to disparage your ambitions. Small minds will always do that, but great minds will give you a feeling that you can become great too.\” — Mark Twain</string>
-    <string name="wednesday_quote">\“When you change your thoughts, remember to also change your world.\”—Norman Vincent Peale</string>
-    <string name="thursday_quote">\“It is only when we take chances, when our lives improve. The initial and the most difficult risk that we need to take is to become honest.\" —Walter Anderson</string>
-    <string name="friday_quote">\“Nature has given us all the pieces required to achieve exceptional wellness and health, but has left it to us to put these pieces together.\” —Diane McLaren</string>
-    <string name="saturday_quote">\“When you give joy to other people, you get more joy in return. You should give a good thought to happiness that you can give out.\”— Eleanor Roosevelt</string>
+    <string name="upload">Upload An Accomplishment</string>
+    <string name="button_msg">List of Accomplishments</string>
+    <string name="your_acc">Tell Us Your Accomplishment!</string>
+    <string name="post">Post</string>
+    <string name="cancel">cancel</string>
+    <string name="no_post">You have not posted yet today.</string>
+    <string name="d1">Day 1 - Today I got an A+ on my calculus test.</string>
+    <string name="d2">Day 2 - I finished reading my novel.</string>
+    <string name="d3">Day 3 - Finally bench pressed 225lbs.</string>
+    <string name="d4">Day 4 - Finished my course in Python with an A-.</string>
+    <string name="today">No accomplishments yet today.</string>
+    <string name="login">LOGIN</string>
+    <string name="username_hint">Enter Username</string>
+    <string name="password_hint">Enter Password</string>
+    <string name="username">USERNAME</string>
+    <string name="password">PASSWORD</string>
+    <string name="missing_username">Please Input Username</string>
+    <string name="missing_password">Please Input Password</string>
+    <string name="app_title">MOTAVATO</string>
+    <string name="title_activity_message_board">MessageBoard</string>
+    <string name="create_post">Create Post</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

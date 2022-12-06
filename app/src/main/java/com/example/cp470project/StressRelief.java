@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 import java.util.Locale;
 
-public class stressrelief extends AppCompatActivity {
+public class StressRelief extends AppCompatActivity {
 public static final long starttimeinms = 5999;
 private TextView countdown;
 private TextView p;
