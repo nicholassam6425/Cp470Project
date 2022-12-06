@@ -1,13 +1,11 @@
 package com.example.cp470project;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import java.util.Arrays;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -16,21 +14,27 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class ChecklistActivity extends AppCompatActivity {
     public ArrayList<String> objectives = new ArrayList<>();
 
     //THIS ARRAY IS AN ARRAY OF CHECKED BOXES. USE FOR PROGRESS
     public boolean checked[] = new boolean[0];
+
 
 
     static SQLiteDatabase database;
@@ -69,6 +73,19 @@ public class ChecklistActivity extends AppCompatActivity {
                 CustomDialogBuilder builder1 = new CustomDialogBuilder(ChecklistActivity.this,
                         adapter1);
                 builder1.build();
+            }
+        });
+
+        Button track = findViewById(R.id.tracking);
+
+        track.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Bundle b = new Bundle();
+                b.putBooleanArray("arr", checked);
+                Intent i = new Intent(ChecklistActivity.this, TrackingSystem.class);
+                i.putExtras(b);
+                startActivity(i);
             }
         });
 
@@ -131,11 +148,14 @@ public class ChecklistActivity extends AppCompatActivity {
                     });
             Dialog dialog = customDialog.create();
             dialog.show();
+
+            Log.d("hi", "length" + checked.length);
+
         }
     }
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        database.close();
+        //database.close();
     }
 }
