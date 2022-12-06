@@ -23,7 +23,7 @@
         <activity android:name=".ChecklistActivity"
             android:exported="false"/>
         <activity android:name=".stressrelief"
-            android:exported="false">
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

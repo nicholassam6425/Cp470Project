@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.i(ACTIVITY_NAME, "User clicked Stress Relief");
-                //Intent intent = new Intent(MainActivity.this,StressRelief.class);
-                //startActivity(intent);
+                Intent intent = new Intent(MainActivity.this,stressrelief.class);
+                startActivity(intent);
             }
         });
         activity3.setOnClickListener(new View.OnClickListener() {
