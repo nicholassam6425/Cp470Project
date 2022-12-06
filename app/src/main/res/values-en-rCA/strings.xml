@@ -42,4 +42,5 @@
     <string name="objectivetitle">Enter your goal below!</string>
     <string name="objectivedialoghint">Enter your goal here!</string>
     <string name="goaltoast">Goal added!</string>
+    <string name="help">By Nicholas Sam, Mehan Sritharan, Nihal Medak, Jarod Liu, Joshua Haberly. Version 1.0.</string>
 </resources>
