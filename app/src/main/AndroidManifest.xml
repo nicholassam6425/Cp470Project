@@ -22,7 +22,13 @@
         </activity>
         <activity android:name=".ChecklistActivity"
             android:exported="false"/>
-        <activity android:name=".stressrelief"
+        <activity android:name=".StressRelief"
+            android:exported="false"/>
+        <activity android:name=".TrackingSystem"
+            android:exported="false"/>
+        <activity android:name=".AccomplishmentActivity"
+            android:exported="false"/>
+        <activity android:name=".MessageBoard"
             android:exported="false"/>
         <activity
             android:name=".MainActivity"
