@@ -36,7 +36,7 @@ public class MessageBoard extends AppCompatActivity {
 
     protected static final String ACTIVITY_NAME = "MessageBoard";
 
-    public Button sendButton;
+    public Button createButton;
     public ListView gridView;
     public EditText chatMessage;
     public ArrayList<String> chatMessages = new ArrayList<String>();
@@ -64,7 +64,7 @@ public class MessageBoard extends AppCompatActivity {
             //image.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),R.drawable.qotd1));
             //image.setVisibility(View.VISIBLE);
             message.setText(   getItem(position)  ); // get the string at position
-            username.setText("" +getUsername(position));
+            username.setText(getUsername(position));
             return result;
         }
         public long getItemId(int position){
@@ -83,9 +83,9 @@ public class MessageBoard extends AppCompatActivity {
         setContentView(R.layout.activity_message_board);
 
 
-        sendButton    =  findViewById(R.id.sendButton);
+        createButton    =  findViewById(R.id.sendButton);
         gridView      =  findViewById(R.id.listView);
-        chatMessage   =  findViewById(R.id.chatMessage);
+        chatMessage  = findViewById(R.id.chatMessage);
 
         MessageBoardDatabaseHelper helper = new MessageBoardDatabaseHelper(this);
         database = helper.getWritableDatabase();
@@ -108,6 +108,20 @@ public class MessageBoard extends AppCompatActivity {
                 cursor.moveToNext();
             }
         }
+        createButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String message = chatMessage.getText().toString();
+                chatMessages.add(message);
+                usernames.add(LoginActivity.username);
+                messageAdapter.notifyDataSetChanged();
+                chatMessage.setText("");
+                ContentValues values = new ContentValues();
+                values.put(MessageBoardDatabaseHelper.KEY_MESSAGE,message);
+                values.put(MessageBoardDatabaseHelper.KEY_USERNAME,LoginActivity.username);
+                database.insert(MessageBoardDatabaseHelper.TABLE_NAME,null,values);
+            }
+    });
     }
     @Override
     protected void onDestroy() {

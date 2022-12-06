@@ -5,7 +5,7 @@
     <string name="activity1">Checklist</string>
     <string name="activity2">Stress Relief</string>
     <string name="activity3">Tracking System</string>
-    <string name="activity4">Accomplishment</string>
+    <string name="activity4">Personal Accomplishment</string>
     <string name="activity5">Quote of the Day</string>
     <string name="activity6">Message Board</string>
     <string name="day_change_hint">Change Day</string>
@@ -29,6 +29,7 @@
     <string name="missing_password">Please Input Password</string>
     <string name="app_title">MOTAVATO</string>
     <string name="title_activity_message_board">MessageBoard</string>
+    <string name="create_post">Create Post</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
