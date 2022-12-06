@@ -9,8 +9,8 @@
     <string name="activity5">Quote of the Day</string>
     <string name="activity6">Message Board</string>
     <string name="day_change_hint">Change Day</string>
-    <string name="upload">Upload Today\'s Accomplishment</string>
-    <string name="button_msg">Accomplishment of the Day</string>
+    <string name="upload">Upload An Accomplishment</string>
+    <string name="button_msg">List of Accomplishments</string>
     <string name="your_acc">Tell Us Your Accomplishment!</string>
     <string name="post">Post</string>
     <string name="cancel">cancel</string>
