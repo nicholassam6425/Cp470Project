@@ -1,12 +1,17 @@
 package com.example.cp470project;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
         Button activity4 = findViewById(R.id.activity4);
         Button activity5 = findViewById(R.id.activity5);
         Button activity6 = findViewById(R.id.activity6);
+
+        Toolbar helptoolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(helptoolbar);
 
         activity1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,10 +75,28 @@ public class MainActivity extends AppCompatActivity {
         activity6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Log.i(ACTIVITY_NAME, "User clicked Message Board");
+                Log.i(ACTIVITY_NAME, "User clicked Activity6");
                 Intent intent = new Intent(MainActivity.this,MessageBoard.class);
                 startActivity(intent);
             }
         });
+    }
+    @Override
+    public boolean onCreateOptionsMenu (Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_toolbar_menu, menu);
+        return true;
+
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem mi) {
+        switch(mi.getItemId()) {
+            case R.id.about:
+                Toast.makeText(this, R.string.help, Toast.LENGTH_LONG).show();
+                break;
+            default:
+                break;
+        }
+        return true;
     }
 }

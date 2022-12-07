@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Cp470Project</string>
     <string name="title_activity_main">MainActivity</string>
@@ -30,7 +31,6 @@
     <string name="app_title">MOTAVATO</string>
     <string name="title_activity_message_board">MessageBoard</string>
     <string name="create_post">Create Post</string>
-    <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>

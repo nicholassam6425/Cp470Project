@@ -4,7 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StressRelief">
+    android:background="#211d44"
+    app:backgroundTint="@null"
+    android:backgroundTintMode="src_over"
+   >
 
     <TextView
         android:id="@+id/textView"
@@ -14,8 +17,46 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="182dp"
         android:text="00:00"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="60dp" />
+
+    <ImageView
+        android:id="@+id/bgcircle.png"
+        android:layout_width="276dp"
+        android:layout_height="247dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:src="@drawable/bgcircle"
+        app:backgroundTint="@null"/>
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/bgcircle"-->
+    <!--        android:layout_width="276dp"-->
+    <!--        android:layout_height="247dp"-->
+    <!--        android:layout_marginStarte="8dp"-->
+    <!--        android:layout_marginTop="50dp"-->
+    <!--        android:src="@drawable/bgcircle"-->
+    <!--    app:layout_constraintEnd_toEndof="parent"-->
+    <!--    app:layout_constraintHorizontal_bias=0.464"-->
+    <!--    app: layout_constraintStart_toStartf="parent"-->
+    <!--    app: layout_constraintTop_toTopOf="parent" />-->
+
+
+    <ImageView
+        android:id="@+id/icanchor"
+        android:layout_width="wrap_content"
+        android:layout_height="319dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+
+        app:backgroundTint="@null"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="-9dp"
+
+        android:src="@drawable/icanchor" />
 
     <Button
         android:id="@+id/button"
@@ -23,9 +64,14 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="114dp"
-        android:layout_marginBottom="321dp"
-        android:text="Start" />
+        android:layout_centerVertical="true"
+        android:layout_marginStart="96dp"
+        android:layout_marginBottom="332dp"
+        android:background="@drawable/custombtn"
+        android:text="Start"
+        app:backgroundTint="@null"
+
+        />
 
     <Button
         android:id="@+id/button2"
@@ -33,10 +79,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="96dp"
-        android:layout_marginBottom="322dp"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="333dp"
+        android:background="@drawable/custombtn"
         android:text="Reset"
         android:visibility="invisible"
+        app:backgroundTint="@null"
         tools:visibility="visible" />
 
     <TextView
@@ -47,7 +96,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="84dp"
         android:text="TextView"
-        android:textSize="30dp"
-        android:textColor="@color/black"
-        />
+        android:textColor="@color/white"
+        android:textSize="60dp" />
+
 </RelativeLayout>

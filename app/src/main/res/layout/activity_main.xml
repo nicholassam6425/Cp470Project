@@ -5,75 +5,85 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintHeight_percent=".1"
+        app:layout_constraintWidth_percent="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
     <Button
         android:id="@+id/activity1"
-        android:text ="@string/activity1"
-        android:textSize="13dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintWidth_percent=".5"
-        app:layout_constraintHeight_percent=".33"
+        android:drawableRight="@drawable/done"
+        android:text="@string/activity1"
+        android:textSize="13dp"
+        app:layout_constraintHeight_percent=".30"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:drawableRight="@drawable/done"/>
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintWidth_percent=".5" />
 
     <Button
         android:id="@+id/activity2"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:drawableRight="@drawable/excercise"
         android:text="@string/activity2"
         android:textSize="13dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent=".33"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_percent="0.5"
-        android:drawableRight="@drawable/excercise"/>
+        app:layout_constraintHeight_percent=".30"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        app:layout_constraintWidth_percent="0.5" />
 
     <Button
         android:id="@+id/activity3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:drawableRight="@drawable/chart"
         android:text="@string/activity3"
         android:textSize="13dp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintWidth_percent=".5"
-        app:layout_constraintHeight_percent=".33"
+        app:layout_constraintHeight_percent=".30"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/activity1"
-        android:drawableRight="@drawable/chart"/>
+        app:layout_constraintWidth_percent=".5" />
+
     <Button
         android:id="@+id/activity4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:drawableRight="@drawable/star"
         android:text="@string/activity4"
         android:textSize="13dp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintWidth_percent=".5"
-        app:layout_constraintHeight_percent=".33"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".30"
         app:layout_constraintTop_toBottomOf="@id/activity2"
-        android:drawableRight="@drawable/star"/>
+        app:layout_constraintWidth_percent=".5" />
+
     <Button
         android:id="@+id/activity5"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:drawableRight="@drawable/speech"
         android:text="@string/activity5"
         android:textSize="13dp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintWidth_percent=".5"
-        app:layout_constraintHeight_percent=".33"
+        app:layout_constraintHeight_percent=".30"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/activity3"
-        android:drawableRight="@drawable/speech"/>
+        app:layout_constraintWidth_percent=".5" />
+
     <Button
         android:id="@+id/activity6"
-        android:text="@string/activity6"
-        android:textSize="13dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintWidth_percent=".5"
-        app:layout_constraintHeight_percent=".33"
+        android:drawableRight="@drawable/communicate"
+        android:text="@string/activity6"
+        android:textSize="13dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent=".30"
         app:layout_constraintTop_toBottomOf="@id/activity4"
-        android:drawableRight="@drawable/communicate"/>
+        app:layout_constraintWidth_percent=".5" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
