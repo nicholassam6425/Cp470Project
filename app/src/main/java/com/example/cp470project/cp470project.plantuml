@@ -1,0 +1,312 @@
+@startuml
+
+title __CP470PROJECT's Class Diagram__\n
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.AccomplishmentActivity {
+        ~ DB : SQLiteDatabase
+        ~ chats : ArrayList<String>
+        # onCreate()
+        # onDestroy()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.AccomplishmentActivity.ChatAdapter {
+        + ChatAdapter()
+        + getCount()
+        + getItem()
+        + getView()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.ChatDatabaseHelper {
+        {static} + DATABASE_CREATE : String
+        {static} + DATABASE_NAME : String
+        {static} + KEY_CAPTION : String
+        {static} + KEY_TIME : String
+        {static} + TABLE_NAME : String
+        {static} + VERSION_NUM : int
+        + ChatDatabaseHelper()
+        + onCreate()
+        + onUpgrade()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.ChecklistActivity {
+        + checked : boolean[]
+        + objectives : ArrayList<String>
+        {static} ~ database : SQLiteDatabase
+        - ispopulated : boolean
+        # onCreate()
+        # onDestroy()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.ChecklistActivity.ChecklistAdapter {
+        + ChecklistAdapter()
+        + getCount()
+        + getItem()
+        + getStatus()
+        + getView()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.ChecklistActivity.CustomDialogBuilder {
+        ~ activity : AppCompatActivity
+        + CustomDialogBuilder()
+        + build()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.ChecklistDatabaseHelper {
+        {static} + DATABASE_NAME : String
+        {static} + VERSION_NUM : int
+        {static} + checked_name : String
+        {static} + id : String
+        {static} + objective_value : String
+        {static} + table_name : String
+        {static} - DATABASE_CREATE : String
+        + ChecklistDatabaseHelper()
+        + cursorToString()
+        + onCreate()
+        + onUpgrade()
+        + tableToString()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.FirstFragment {
+        + onCreateView()
+        + onDestroyView()
+        + onViewCreated()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.LoginActivity {
+        {static} + username : String
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.MainActivity {
+        {static} # ACTIVITY_NAME : String
+        + onCreateOptionsMenu()
+        + onOptionsItemSelected()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.MessageBoard {
+        + boardMessage : EditText
+        + boardMessages : ArrayList<String>
+        + createButton : Button
+        + listView : ListView
+        + usernames : ArrayList<String>
+        {static} # ACTIVITY_NAME : String
+        ~ cursor : Cursor
+        ~ database : SQLiteDatabase
+        # onCreate()
+        # onDestroy()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.MessageBoard.MessageBoardAdapter {
+        + MessageBoardAdapter()
+        + getCount()
+        + getItem()
+        + getItemId()
+        + getUsername()
+        + getView()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.MessageBoardDatabaseHelper {
+        {static} + ACTIVITY_NAME : String
+        {static} + DATABASE_NAME : String
+        {static} + KEY_ID : String
+        {static} + KEY_MESSAGE : String
+        {static} + KEY_USERNAME : String
+        {static} + TABLE_NAME : String
+        {static} + VERSION_NUM : int
+        {static} - create : String
+        + MessageBoardDatabaseHelper()
+        + onCreate()
+        + onUpgrade()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.QuoteOfTheDay {
+        + day : int
+        # onCreate()
+        - ResolveDayImage()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.QuoteOfTheDay.QuoteQuery {
+        + quote : String
+        ~ bar : ProgressBar
+        ~ textView : TextView
+        # doInBackground()
+        # onPostExecute()
+        # onProgressUpdate()
+        ~ QuoteQuery()
+        - GetQuoteFromJson()
+        - downloadUrl()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.SecondFragment {
+        + onCreateView()
+        + onDestroyView()
+        + onViewCreated()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.StreaksActivity {
+        + createButton : Button
+        + daysOffset : Long
+        + debugButton : Button
+        + listView : ListView
+        + streakDescs : ArrayList<String>
+        + times : ArrayList<Long>
+        {static} # ACTIVITY_NAME : String
+        ~ cursor : Cursor
+        ~ database : SQLiteDatabase
+        # onCreate()
+        # onDestroy()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.StreaksActivity.StreaksAdapter {
+        + StreaksAdapter()
+        + getCount()
+        + getItem()
+        + getItemId()
+        + getTime()
+        + getView()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.StreaksDatabaseHelper {
+        {static} + ACTIVITY_NAME : String
+        {static} + DATABASE_NAME : String
+        {static} + KEY_ID : String
+        {static} + KEY_STREAK_DESC : String
+        {static} + KEY_STREAK_TIME : String
+        {static} + TABLE_NAME : String
+        {static} + VERSION_NUM : int
+        {static} - create : String
+        + StreaksDatabaseHelper()
+        + onCreate()
+        + onUpgrade()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.StressRelief {
+        {static} + starttimeinms : long
+        ~ anim : ObjectAnimator
+        ~ icanchor : ImageView
+        ~ seconds : int
+        - bpause : Button
+        - breset : Button
+        - countdown : TextView
+        - countdowntime : CountDownTimer
+        - i : int
+        - leftinmls : long
+        - mrunning : boolean
+        - p : TextView
+        # onCreate()
+        - Startimer()
+        - pausetimer()
+        - resetimer()
+        - updatecountdowntext()
+    }
+  }
+  
+
+  namespace com.example.cp470project {
+    class com.example.cp470project.TrackingSystem {
+        ~ bar : ProgressBar
+        # onCreate()
+        # onDestroy()
+    }
+  }
+  
+
+  com.example.cp470project.AccomplishmentActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.cp470project.AccomplishmentActivity +-down- com.example.cp470project.AccomplishmentActivity.ChatAdapter
+  com.example.cp470project.AccomplishmentActivity.ChatAdapter -up-|> android.widget.ArrayAdapter
+  com.example.cp470project.ChatDatabaseHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  com.example.cp470project.ChecklistActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.cp470project.ChecklistActivity o-- com.example.cp470project.ChecklistDatabaseHelper : checklistDatabaseHelper
+  com.example.cp470project.ChecklistActivity +-down- com.example.cp470project.ChecklistActivity.ChecklistAdapter
+  com.example.cp470project.ChecklistActivity +-down- com.example.cp470project.ChecklistActivity.CustomDialogBuilder
+  com.example.cp470project.ChecklistActivity.ChecklistAdapter -up-|> android.widget.ArrayAdapter
+  com.example.cp470project.ChecklistActivity.CustomDialogBuilder o-- com.example.cp470project.ChecklistActivity.ChecklistAdapter : adapter1
+  com.example.cp470project.ChecklistDatabaseHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  com.example.cp470project.FirstFragment -up-|> androidx.fragment.app.Fragment
+  com.example.cp470project.FirstFragment o-- com.example.cp470project.databinding.FragmentFirstBinding : binding
+  com.example.cp470project.LoginActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.cp470project.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.cp470project.MessageBoard -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.cp470project.MessageBoard +-down- com.example.cp470project.MessageBoard.MessageBoardAdapter
+  com.example.cp470project.MessageBoard.MessageBoardAdapter -up-|> android.widget.ArrayAdapter
+  com.example.cp470project.MessageBoardDatabaseHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  com.example.cp470project.QuoteOfTheDay -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.cp470project.QuoteOfTheDay +-down- com.example.cp470project.QuoteOfTheDay.QuoteQuery
+  com.example.cp470project.QuoteOfTheDay.QuoteQuery -up-|> android.os.AsyncTask
+  com.example.cp470project.SecondFragment -up-|> androidx.fragment.app.Fragment
+  com.example.cp470project.SecondFragment o-- com.example.cp470project.databinding.FragmentSecondBinding : binding
+  com.example.cp470project.StreaksActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.cp470project.StreaksActivity +-down- com.example.cp470project.StreaksActivity.StreaksAdapter
+  com.example.cp470project.StreaksActivity.StreaksAdapter -up-|> android.widget.ArrayAdapter
+  com.example.cp470project.StreaksDatabaseHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  com.example.cp470project.StressRelief -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.cp470project.TrackingSystem -up-|> com.example.cp470project.ChecklistActivity
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

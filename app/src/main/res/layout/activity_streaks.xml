@@ -30,6 +30,6 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/sendButton"
         android:layout_alignParentBottom="true"
-        android:text="debug"
+        android:text="DEMO"
         ></Button>
 </RelativeLayout>
