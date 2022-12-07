@@ -85,6 +85,8 @@ public class AccomplishmentActivity extends AppCompatActivity {
                         .setNegativeButton(R.string.cancel, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
+                                Toast toast = Toast.makeText(AccomplishmentActivity.this, "Post Discarded", Toast.LENGTH_SHORT);
+                                toast.show();
                             }
                         })
                         .show();
