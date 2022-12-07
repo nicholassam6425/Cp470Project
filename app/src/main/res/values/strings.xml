@@ -43,4 +43,13 @@
     <string name="objectivedialoghint">Enter your goal here!</string>
     <string name="goaltoast">Goal added!</string>
     <string name="help">By Nicholas Sam, Mehan Sritharan, Nihal Medak, Jarod Liu, Joshua Haberly. Version 1.0.</string>
+    <string name="start">Start</string>
+    <string name="hold">Hold</string>
+    <string name="exhale">Exhale</string>
+    <string name="pause">Pause</string>
+    <string name="inhale">Inhale</string>
+    <string name="time">00:00</string>
+    <string name="reset">Reset</string>
+
+
 </resources>
