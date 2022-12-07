@@ -32,6 +32,8 @@ public class MainActivity extends AppCompatActivity {
         Toolbar helptoolbar = findViewById(R.id.toolbar);
         setSupportActionBar(helptoolbar);
 
+        setTitle("Main Menu");
+
         activity1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
