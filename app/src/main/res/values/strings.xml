@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Cp470Project</string>
+    <string name="app_name">MOTAVATO</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="launch_activity">Launch an Activity (DEBUG)</string>
     <string name="activity1">Checklist</string>

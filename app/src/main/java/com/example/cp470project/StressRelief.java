@@ -20,6 +20,9 @@ import android.widget.Toast;
 import java.util.Locale;
 
 public class StressRelief extends AppCompatActivity {
+
+    protected static final String ACTIVITY_NAME = "StressRelief";
+
 public static final long starttimeinms = 5999;
 private TextView countdown;
 private TextView p;

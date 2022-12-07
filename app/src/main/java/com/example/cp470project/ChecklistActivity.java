@@ -31,6 +31,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ChecklistActivity extends AppCompatActivity {
+
+    protected static final String ACTIVITY_NAME = "ChecklistActivity";
+
     public ArrayList<String> objectives = new ArrayList<>();
 
     //THIS ARRAY IS AN ARRAY OF CHECKED BOXES. USE FOR PROGRESS

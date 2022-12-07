@@ -7,6 +7,8 @@ import android.widget.TextView;
 
 public class TrackingSystem extends ChecklistActivity {
 
+    protected static final String ACTIVITY_NAME = "TrackingSystem";
+
 
     //Intent intent = new Intent(this, TrackingSystem.class);
     // intent.putExtra("arr", checked);

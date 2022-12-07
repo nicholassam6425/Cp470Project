@@ -8,7 +8,7 @@ import android.util.Log;
 
 public class StreaksDatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String ACTIVITY_NAME = "ChatDatabaseHelper";
+    public static final String ACTIVITY_NAME = "StreaksDatabaseHelper";
 
     public static String DATABASE_NAME = "streaks.db";
     public static int VERSION_NUM = 8;

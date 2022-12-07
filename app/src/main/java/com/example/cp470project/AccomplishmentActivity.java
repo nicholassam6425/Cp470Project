@@ -29,6 +29,8 @@ import java.util.Date;
 
 public class AccomplishmentActivity extends AppCompatActivity {
 
+    protected static final String ACTIVITY_NAME = "AccomplishmentActivity";
+
     ArrayList<String> chats = new ArrayList<String>();
     SQLiteDatabase DB;
 

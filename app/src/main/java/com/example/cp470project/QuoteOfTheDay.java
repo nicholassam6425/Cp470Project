@@ -25,6 +25,9 @@ import java.net.URL;
 import java.util.Calendar;
 
 public class QuoteOfTheDay extends AppCompatActivity {
+
+    protected static final String ACTIVITY_NAME = "QuoteOfTheDay";
+
     public int day = 1;
 
     private class QuoteQuery extends AsyncTask<String, Integer, String> {

@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
+    protected static final String ACTIVITY_NAME = "LoginActivity";
+
     public static String username = "";
 
     @Override

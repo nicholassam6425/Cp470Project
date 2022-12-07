@@ -8,6 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 public class ChecklistDatabaseHelper extends SQLiteOpenHelper {
+
+    protected static final String ACTIVITY_NAME = "ChecklistDatabaseHelper";
+
     public static final String DATABASE_NAME = "Messages.db";
     public static final int VERSION_NUM = 1;
     public static final String table_name = "myTable";

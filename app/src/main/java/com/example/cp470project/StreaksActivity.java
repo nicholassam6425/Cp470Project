@@ -42,7 +42,7 @@ import java.util.Date;
 
 public class StreaksActivity extends AppCompatActivity {
 
-    protected static final String ACTIVITY_NAME = "Streaks";
+    protected static final String ACTIVITY_NAME = "StreaksActivity";
 
     public Button createButton;
     public Button debugButton;

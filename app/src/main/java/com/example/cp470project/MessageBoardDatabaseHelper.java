@@ -8,7 +8,7 @@ import android.util.Log;
 
 public class MessageBoardDatabaseHelper extends SQLiteOpenHelper {
 
-    public static final String ACTIVITY_NAME = "ChatDatabaseHelper";
+    public static final String ACTIVITY_NAME = "MessageBoardDatabaseHelper";
 
     public static String DATABASE_NAME = "messageboard.db";
     public static int VERSION_NUM = 7;
