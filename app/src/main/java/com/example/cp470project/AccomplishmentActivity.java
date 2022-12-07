@@ -1,6 +1,5 @@
 package com.example.cp470project;
 
-
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,6 +19,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -77,6 +77,8 @@ public class AccomplishmentActivity extends AppCompatActivity {
                                 messageAdapter.notifyDataSetChanged();
                                 values1.put(ChatDatabaseHelper.KEY_CAPTION, cap2);
                                 DB.insert(ChatDatabaseHelper.TABLE_NAME, "NullPlaceHolder", values1);
+                                Toast toast = Toast.makeText(AccomplishmentActivity.this, "Accomplishment Posted", Toast.LENGTH_SHORT);
+                                toast.show();
                                 //new_post.setText(dateFormat.format(date) + ": " + s1);
                             }
                         })
