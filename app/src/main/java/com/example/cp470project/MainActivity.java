@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Log.i(ACTIVITY_NAME, "User clicked Tracking System");
-                Intent intent = new Intent(MainActivity.this,TrackingSystem.class);
+                Intent intent = new Intent(MainActivity.this,StreaksActivity.class);
                 startActivity(intent);
             }
         });

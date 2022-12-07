@@ -37,22 +37,22 @@ public class MessageBoard extends AppCompatActivity {
     protected static final String ACTIVITY_NAME = "MessageBoard";
 
     public Button createButton;
-    public ListView gridView;
-    public EditText chatMessage;
-    public ArrayList<String> chatMessages = new ArrayList<String>();
+    public ListView listView;
+    public EditText boardMessage;
+    public ArrayList<String> boardMessages = new ArrayList<String>();
     public ArrayList<String> usernames = new ArrayList<String>();
     SQLiteDatabase database;
     Cursor cursor = null;
 
-    private class ChatAdapter extends ArrayAdapter<String>{
-        public ChatAdapter(Context ctx) {
+    private class MessageBoardAdapter extends ArrayAdapter<String>{
+        public MessageBoardAdapter(Context ctx) {
             super(ctx, 0);
         }
         public int getCount(){
-            return chatMessages.size();
+            return boardMessages.size();
         }
         public String getItem(int position){
-            return chatMessages.get(position);
+            return boardMessages.get(position);
         }
         public View getView(int position, View convertView, ViewGroup parent){
             LayoutInflater inflater = MessageBoard.this.getLayoutInflater();
@@ -60,10 +60,7 @@ public class MessageBoard extends AppCompatActivity {
             result = inflater.inflate(R.layout.message_board_post,null);
             TextView message = (TextView)result.findViewById(R.id.post_text);
             TextView username = (TextView)result.findViewById(R.id.username_text);
-            //ImageView image = result.findViewById(R.id.post_image);
-            //image.setImageDrawable(ContextCompat.getDrawable(getApplicationContext(),R.drawable.qotd1));
-            //image.setVisibility(View.VISIBLE);
-            message.setText(   getItem(position)  ); // get the string at position
+            message.setText(getItem(position));
             username.setText(getUsername(position));
             return result;
         }
@@ -84,38 +81,35 @@ public class MessageBoard extends AppCompatActivity {
 
 
         createButton    =  findViewById(R.id.sendButton);
-        gridView      =  findViewById(R.id.listView);
-        chatMessage  = findViewById(R.id.chatMessage);
+        listView      =  findViewById(R.id.listView);
+        boardMessage  = findViewById(R.id.chatMessage);
 
         MessageBoardDatabaseHelper helper = new MessageBoardDatabaseHelper(this);
         database = helper.getWritableDatabase();
         String[] allItems = new String[]{MessageBoardDatabaseHelper.KEY_ID,MessageBoardDatabaseHelper.KEY_MESSAGE, MessageBoardDatabaseHelper.KEY_USERNAME};
         cursor = database.query(MessageBoardDatabaseHelper.TABLE_NAME,allItems,null,null,null,null,null);
 
-        ChatAdapter messageAdapter = new ChatAdapter( this );
-        gridView.setAdapter (messageAdapter);
+        MessageBoardAdapter messageAdapter = new MessageBoardAdapter( this );
+        listView.setAdapter (messageAdapter);
 
         if(cursor.getCount() > 0) {
             cursor.moveToFirst();
             while (!cursor.isAfterLast()) {
-                Log.i(ACTIVITY_NAME, "Cursor’s  column count =" + cursor.getColumnCount());
                 int index = cursor.getColumnIndexOrThrow(MessageBoardDatabaseHelper.KEY_MESSAGE);
                 int index2 = cursor.getColumnIndexOrThrow(MessageBoardDatabaseHelper.KEY_USERNAME);
-                chatMessages.add(cursor.getString(index));
+                boardMessages.add(cursor.getString(index));
                 usernames.add(cursor.getString(index2));
-                Log.i(ACTIVITY_NAME,cursor.getString(index2));
-                Log.i(ACTIVITY_NAME, "SQL MESSAGE:" + cursor.getString(index));
                 cursor.moveToNext();
             }
         }
         createButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String message = chatMessage.getText().toString();
-                chatMessages.add(message);
+                String message = boardMessage.getText().toString();
+                boardMessages.add(message);
                 usernames.add(LoginActivity.username);
                 messageAdapter.notifyDataSetChanged();
-                chatMessage.setText("");
+                boardMessage.setText("");
                 ContentValues values = new ContentValues();
                 values.put(MessageBoardDatabaseHelper.KEY_MESSAGE,message);
                 values.put(MessageBoardDatabaseHelper.KEY_USERNAME,LoginActivity.username);
@@ -127,6 +121,5 @@ public class MessageBoard extends AppCompatActivity {
     protected void onDestroy() {
         super.onDestroy();
         database.close();
-        Log.i(ACTIVITY_NAME, "In onDestroy()");
     }
 }

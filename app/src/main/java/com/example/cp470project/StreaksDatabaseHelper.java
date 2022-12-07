@@ -6,20 +6,20 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.util.Log;
 
-public class MessageBoardDatabaseHelper extends SQLiteOpenHelper {
+public class StreaksDatabaseHelper extends SQLiteOpenHelper {
 
     public static final String ACTIVITY_NAME = "ChatDatabaseHelper";
 
-    public static String DATABASE_NAME = "messageboard.db";
-    public static int VERSION_NUM = 7;
+    public static String DATABASE_NAME = "streaks.db";
+    public static int VERSION_NUM = 8;
 
     public final static String TABLE_NAME = "tableOfBoardMessages";
     public final static String KEY_ID = "_id";
-    public final static String KEY_USERNAME = "username";
-    public final static String KEY_MESSAGE = "board_message";
-    private static final String create = "create table " + TABLE_NAME + " ( " + KEY_ID+ " integer primary key autoincrement, " + KEY_MESSAGE + " text not null,"  + KEY_USERNAME + " text not null)";
+    public final static String KEY_STREAK_DESC = "streak_desc";
+    public final static String KEY_STREAK_TIME = "streak_time";
+    private static final String create = "create table " + TABLE_NAME + " ( " + KEY_ID+ " integer primary key autoincrement, " + KEY_STREAK_DESC + " text not null, "  + KEY_STREAK_TIME + " integer)";
 
-    public MessageBoardDatabaseHelper(Context ctx){
+    public StreaksDatabaseHelper(Context ctx){
         super(ctx, DATABASE_NAME, null, VERSION_NUM);
     }
 
